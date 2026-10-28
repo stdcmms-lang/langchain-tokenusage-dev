@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-10-09T12:00:00.000Z",
+  "dataUpdatedAt": "2026-10-09T11:59:00.000Z",
+  "historyDays": 366,
+  "baselineDays": 7,
+  "minBaselineRuns": 3,
+  "flatPoints": 2,
+  "models": [
+    {
+      "model": "alpha",
+      "name": "Alpha",
+      "provider": "Anthropic",
+      "latest": {"day": "2026-10-09", "score": 60, "suiteVersion": "suite.1"},
+      "previous": {"day": "2026-10-08", "score": 78, "suiteVersion": "suite.1"},
+      "change": -18,
+      "baseline": 84,
+      "baselineRuns": 3,
+      "changeVsBaseline": -24,
+      "trend": "down",
+      "history": [
+        {"day": "2026-10-02", "score": 90, "suiteVersion": "suite.1"},
+        {"day": "2026-10-04", "score": 84, "suiteVersion": "suite.1"},
+        {"day": "2026-10-08", "score": 78, "suiteVersion": "suite.1"},
+        {"day": "2026-10-09", "score": 60, "suiteVersion": "suite.1"}
+      ]
+    },
+    {
+      "model": "beta",
+      "name": "Beta",
+      "provider": "Anthropic",
+      "latest": {"day": "2026-10-09", "score": 44, "suiteVersion": "suite.1"},
+      "previous": {"day": "2026-10-08", "score": 44, "suiteVersion": "suite.1"},
+      "change": 0,
+      "baseline": 42,
+      "baselineRuns": 3,
+      "changeVsBaseline": 2,
+      "trend": "flat",
+      "history": [
+        {"day": "2026-10-06", "score": 40, "suiteVersion": "suite.1"},
+        {"day": "2026-10-07", "score": 42, "suiteVersion": "suite.1"},
+        {"day": "2026-10-08", "score": 44, "suiteVersion": "suite.1"},
+        {"day": "2026-10-09", "score": 44, "suiteVersion": "suite.1"}
+      ]
+    },
+    {
+      "model": "gamma",
+      "name": "Gamma",
+      "provider": "OpenAI",
+      "latest": {"day": "2026-10-09", "score": 54, "suiteVersion": "suite.1"},
+      "previous": {"day": "2026-10-08", "score": 50, "suiteVersion": "suite.1"},
+      "change": 4,
+      "baseline": 50,
+      "baselineRuns": 3,
+      "changeVsBaseline": 4,
+      "trend": "up",
+      "history": [
+        {"day": "2026-10-06", "score": 50, "suiteVersion": "suite.1"},
+        {"day": "2026-10-07", "score": 50, "suiteVersion": "suite.1"},
+        {"day": "2026-10-08", "score": 50, "suiteVersion": "suite.1"},
+        {"day": "2026-10-09", "score": 54, "suiteVersion": "suite.1"}
+      ]
+    },
+    {
+      "model": "shift",
+      "name": "Shift",
+      "provider": "OpenAI",
+      "latest": {"day": "2026-10-09", "score": 10, "suiteVersion": "suite.1"},
+      "previous": {"day": "2026-10-08", "score": 99, "suiteVersion": "suite.0"},
+      "change": null,
+      "baseline": null,
+      "baselineRuns": 0,
+      "changeVsBaseline": null,
+      "trend": null,
+      "history": [
+        {"day": "2026-10-08", "score": 99, "suiteVersion": "suite.0"},
+        {"day": "2026-10-09", "score": 10, "suiteVersion": "suite.1"}
+      ]
+    }
+  ]
+}

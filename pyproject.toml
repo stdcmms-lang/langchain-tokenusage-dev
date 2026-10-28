@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langchain-tokenusage-dev"
+version = "0.1.0"
+description = "Read-only LangChain tools for tokenusage.dev Codex reset announcements and Nerf Watch scores."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Pistachio Technology Inc." }]
+keywords = ["langchain", "tools", "codex", "tokenusage", "nerfwatch"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Typing :: Typed",
+]
+dependencies = ["langchain-core>=1.0,<2"]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8",
+  "pytest-asyncio",
+  "langchain-tests",
+  "build",
+  "twine",
+]
+
+[project.urls]
+Homepage = "https://tokenusage.dev/langchain"
+Documentation = "https://tokenusage.dev/langchain"
+Repository = "https://github.com/stdcmms-lang/langchain-tokenusage-dev"
+Issues = "https://github.com/stdcmms-lang/langchain-tokenusage-dev/issues"
+Changelog = "https://github.com/stdcmms-lang/langchain-tokenusage-dev/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/langchain_tokenusage_dev"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src",
+  "tests",
+  "pyproject.toml",
+  "README.md",
+  "LICENSE",
+  "CHANGELOG.md",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+asyncio_mode = "auto"
+markers = [
+  "integration: calls the production public API; requires --run-integration",
+]
